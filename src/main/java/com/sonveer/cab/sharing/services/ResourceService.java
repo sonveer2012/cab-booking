@@ -56,5 +56,8 @@ public class ResourceService {
     public RequestVehicleObject getRequestedVehicleFromResource(String vehicleNumber){
         return vehicleConcurrentHashMap.get(vehicleNumber);
     }
+    public User getRequestedUserFromResource(String key){
+        return userConcurrentHashMap.get(key);
+    }
 
 }

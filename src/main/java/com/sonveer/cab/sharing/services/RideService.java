@@ -126,7 +126,10 @@ public class RideService {
         filteredSelectedVehicleInfoList.sort(new Comparator<SelectedVehicleInfo>() {
             @Override
             public int compare(SelectedVehicleInfo o1, SelectedVehicleInfo o2) {
-                return o1.getNumberOfSeats() - o2.getNumberOfSeats();
+                if(o2.getNumberOfSeats().equals(o1.getNumberOfSeats())){
+                    return o1.getVehicleNumber().compareTo(o2.getVehicleNumber());
+                }
+                return o2.getNumberOfSeats() - o1.getNumberOfSeats();
             }
         });
 
